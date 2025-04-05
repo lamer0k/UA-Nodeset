@@ -2498,7 +2498,7 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult InitDirectAccessMethodStateMethodCallHandler(
-        ISystemContext context,
+        ISystemContext systemContext,
         MethodState method,
         NodeId objectId,
         string context,
