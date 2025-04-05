@@ -8,6 +8,12 @@
     Scope = "module")]
 
 [assembly: SuppressMessage(
+    "StyleCop.CSharp.SpacingRules",
+    "SA1028:CodeMustNotContainTrailingWhitespace",
+    Justification = "Это форк чужого кода",
+    Scope = "module")]
+
+[assembly: SuppressMessage(
     "StyleCop.CSharp.OrderingRules",
     "SA1200:UsingDirectivesMustBePlacedWithinNamespace",
     Justification = "Мы пока игнорируем это предупреждение - но стоит исправить",

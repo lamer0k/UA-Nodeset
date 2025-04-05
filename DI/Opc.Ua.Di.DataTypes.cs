@@ -34,6 +34,7 @@ using System.Xml;
 using System.Runtime.Serialization;
 using Opc.Ua;
 
+#pragma warning disable CS8600, CS8601,CS8603,CS8604,CS8618,CS8619, CS8625
 namespace Opc.Ua.Di
 {
     #region DeviceHealthEnumeration Enumeration
@@ -1117,3 +1118,4 @@ namespace Opc.Ua.Di
     #endif
     #endregion
 }
+#pragma warning restore CS8600, CS8601,CS8603,CS8604,CS8618,CS8619, CS8625
