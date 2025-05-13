@@ -84,3 +84,9 @@
     "SA1642:ConstructorSummaryDocumentationMustBeginWithStandardText",
     Justification = "Мы не пишем Initializes a new..., т.к. наша документация на русском",
     Scope = "module")]
+    
+[assembly: SuppressMessage(
+    "StyleCop.CSharp.DocumentationRules",
+    "CS8618:ConstructorSummaryDocumentationMustBeginWithStandardText",
+    Justification = "Мы не пишем Initializes a new..., т.к. наша документация на русском",
+    Scope = "module")]
