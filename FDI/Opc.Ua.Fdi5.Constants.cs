@@ -33,7 +33,7 @@ using System.Text;
 using System.Reflection;
 using System.Xml;
 using System.Runtime.Serialization;
-using Opc.Ua.Di;
+//using Opc.Ua.Di;
 using Opc.Ua;
 
 namespace Opc.Ua.Fdi5

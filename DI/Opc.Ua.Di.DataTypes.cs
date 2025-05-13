@@ -1,5 +1,5 @@
-/* ========================================================================
- * Copyright (c) 2005-2019 The OPC Foundation, Inc. All rights reserved.
+﻿/* ========================================================================
+ * Copyright (c) 2005-2021 The OPC Foundation, Inc. All rights reserved.
  *
  * OPC Foundation MIT License 1.00
  * 
@@ -34,7 +34,6 @@ using System.Xml;
 using System.Runtime.Serialization;
 using Opc.Ua;
 
-#pragma warning disable CS8600, CS8601,CS8603,CS8604,CS8618,CS8619, CS8625
 namespace Opc.Ua.Di
 {
     #region DeviceHealthEnumeration Enumeration
@@ -359,21 +358,21 @@ namespace Opc.Ua.Di
     #endif
     #endregion
 
-    #region FetchResultErrorDataType Class
-    #if (!OPCUA_EXCLUDE_FetchResultErrorDataType)
+    #region TransferResultErrorDataType Class
+    #if (!OPCUA_EXCLUDE_TransferResultErrorDataType)
     /// <summary>
     /// 
     /// </summary>
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     [DataContract(Namespace = Opc.Ua.Di.Namespaces.OpcUaDiXsd)]
-    public partial class FetchResultErrorDataType : FetchResultDataType
+    public partial class TransferResultErrorDataType : FetchResultDataType
     {
         #region Constructors
         /// <summary>
         /// The default constructor.
         /// </summary>
-        public FetchResultErrorDataType()
+        public TransferResultErrorDataType()
         {
             Initialize();
         }
@@ -419,19 +418,19 @@ namespace Opc.Ua.Di
         /// <summary cref="IEncodeable.TypeId" />
         public override ExpandedNodeId TypeId
         {
-            get { return DataTypeIds.FetchResultErrorDataType; }
+            get { return DataTypeIds.TransferResultErrorDataType; }
         }
 
         /// <summary cref="IEncodeable.BinaryEncodingId" />
         public override ExpandedNodeId BinaryEncodingId
         {
-            get { return ObjectIds.FetchResultErrorDataType_Encoding_DefaultBinary; }
+            get { return ObjectIds.TransferResultErrorDataType_Encoding_DefaultBinary; }
         }
 
         /// <summary cref="IEncodeable.XmlEncodingId" />
         public override ExpandedNodeId XmlEncodingId
         {
-            get { return ObjectIds.FetchResultErrorDataType_Encoding_DefaultXml; }
+            get { return ObjectIds.TransferResultErrorDataType_Encoding_DefaultXml; }
         }
 
         /// <summary cref="IEncodeable.Encode(IEncoder)" />
@@ -468,7 +467,7 @@ namespace Opc.Ua.Di
                 return true;
             }
 
-            FetchResultErrorDataType value = encodeable as FetchResultErrorDataType;
+            TransferResultErrorDataType value = encodeable as TransferResultErrorDataType;
 
             if (value == null)
             {
@@ -486,14 +485,14 @@ namespace Opc.Ua.Di
         /// <summary cref="ICloneable.Clone" />
         public override object Clone()
         {
-            return (FetchResultErrorDataType)this.MemberwiseClone();
+            return (TransferResultErrorDataType)this.MemberwiseClone();
         }
         #endif
 
         /// <summary cref="Object.MemberwiseClone" />
         public new object MemberwiseClone()
         {
-            FetchResultErrorDataType clone = (FetchResultErrorDataType)base.MemberwiseClone();
+            TransferResultErrorDataType clone = (TransferResultErrorDataType)base.MemberwiseClone();
 
             clone.m_status = (int)Utils.Clone(this.m_status);
             clone.m_diagnostics = (DiagnosticInfo)Utils.Clone(this.m_diagnostics);
@@ -508,54 +507,54 @@ namespace Opc.Ua.Di
         #endregion
     }
 
-    #region FetchResultErrorDataTypeCollection Class
+    #region TransferResultErrorDataTypeCollection Class
     /// <summary>
-    /// A collection of FetchResultErrorDataType objects.
+    /// A collection of TransferResultErrorDataType objects.
     /// </summary>
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
-    [CollectionDataContract(Name = "ListOfFetchResultErrorDataType", Namespace = Opc.Ua.Di.Namespaces.OpcUaDiXsd, ItemName = "FetchResultErrorDataType")]
+    [CollectionDataContract(Name = "ListOfTransferResultErrorDataType", Namespace = Opc.Ua.Di.Namespaces.OpcUaDiXsd, ItemName = "TransferResultErrorDataType")]
     #if !NET_STANDARD
-    public partial class FetchResultErrorDataTypeCollection : List<FetchResultErrorDataType>, ICloneable
+    public partial class TransferResultErrorDataTypeCollection : List<TransferResultErrorDataType>, ICloneable
     #else
-    public partial class FetchResultErrorDataTypeCollection : List<FetchResultErrorDataType>
+    public partial class TransferResultErrorDataTypeCollection : List<TransferResultErrorDataType>
     #endif
     {
         #region Constructors
         /// <summary>
         /// Initializes the collection with default values.
         /// </summary>
-        public FetchResultErrorDataTypeCollection() {}
+        public TransferResultErrorDataTypeCollection() {}
 
         /// <summary>
         /// Initializes the collection with an initial capacity.
         /// </summary>
-        public FetchResultErrorDataTypeCollection(int capacity) : base(capacity) {}
+        public TransferResultErrorDataTypeCollection(int capacity) : base(capacity) {}
 
         /// <summary>
         /// Initializes the collection with another collection.
         /// </summary>
-        public FetchResultErrorDataTypeCollection(IEnumerable<FetchResultErrorDataType> collection) : base(collection) {}
+        public TransferResultErrorDataTypeCollection(IEnumerable<TransferResultErrorDataType> collection) : base(collection) {}
         #endregion
 
         #region Static Operators
         /// <summary>
         /// Converts an array to a collection.
         /// </summary>
-        public static implicit operator FetchResultErrorDataTypeCollection(FetchResultErrorDataType[] values)
+        public static implicit operator TransferResultErrorDataTypeCollection(TransferResultErrorDataType[] values)
         {
             if (values != null)
             {
-                return new FetchResultErrorDataTypeCollection(values);
+                return new TransferResultErrorDataTypeCollection(values);
             }
 
-            return new FetchResultErrorDataTypeCollection();
+            return new TransferResultErrorDataTypeCollection();
         }
 
         /// <summary>
         /// Converts a collection to an array.
         /// </summary>
-        public static explicit operator FetchResultErrorDataType[](FetchResultErrorDataTypeCollection values)
+        public static explicit operator TransferResultErrorDataType[](TransferResultErrorDataTypeCollection values)
         {
             if (values != null)
             {
@@ -573,7 +572,7 @@ namespace Opc.Ua.Di
         /// </summary>
         public object Clone()
         {
-            return (FetchResultErrorDataTypeCollection)this.MemberwiseClone();
+            return (TransferResultErrorDataTypeCollection)this.MemberwiseClone();
         }
         #endregion
         #endif
@@ -581,11 +580,11 @@ namespace Opc.Ua.Di
         /// <summary cref="Object.MemberwiseClone" />
         public new object MemberwiseClone()
         {
-            FetchResultErrorDataTypeCollection clone = new FetchResultErrorDataTypeCollection(this.Count);
+            TransferResultErrorDataTypeCollection clone = new TransferResultErrorDataTypeCollection(this.Count);
 
             for (int ii = 0; ii < this.Count; ii++)
             {
-                clone.Add((FetchResultErrorDataType)Utils.Clone(this[ii]));
+                clone.Add((TransferResultErrorDataType)Utils.Clone(this[ii]));
             }
 
             return clone;
@@ -595,21 +594,21 @@ namespace Opc.Ua.Di
     #endif
     #endregion
 
-    #region FetchResultDataDataType Class
-    #if (!OPCUA_EXCLUDE_FetchResultDataDataType)
+    #region TransferResultDataDataType Class
+    #if (!OPCUA_EXCLUDE_TransferResultDataDataType)
     /// <summary>
     /// 
     /// </summary>
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     [DataContract(Namespace = Opc.Ua.Di.Namespaces.OpcUaDiXsd)]
-    public partial class FetchResultDataDataType : FetchResultDataType
+    public partial class TransferResultDataDataType : FetchResultDataType
     {
         #region Constructors
         /// <summary>
         /// The default constructor.
         /// </summary>
-        public FetchResultDataDataType()
+        public TransferResultDataDataType()
         {
             Initialize();
         }
@@ -678,19 +677,19 @@ namespace Opc.Ua.Di
         /// <summary cref="IEncodeable.TypeId" />
         public override ExpandedNodeId TypeId
         {
-            get { return DataTypeIds.FetchResultDataDataType; }
+            get { return DataTypeIds.TransferResultDataDataType; }
         }
 
         /// <summary cref="IEncodeable.BinaryEncodingId" />
         public override ExpandedNodeId BinaryEncodingId
         {
-            get { return ObjectIds.FetchResultDataDataType_Encoding_DefaultBinary; }
+            get { return ObjectIds.TransferResultDataDataType_Encoding_DefaultBinary; }
         }
 
         /// <summary cref="IEncodeable.XmlEncodingId" />
         public override ExpandedNodeId XmlEncodingId
         {
-            get { return ObjectIds.FetchResultDataDataType_Encoding_DefaultXml; }
+            get { return ObjectIds.TransferResultDataDataType_Encoding_DefaultXml; }
         }
 
         /// <summary cref="IEncodeable.Encode(IEncoder)" />
@@ -729,7 +728,7 @@ namespace Opc.Ua.Di
                 return true;
             }
 
-            FetchResultDataDataType value = encodeable as FetchResultDataDataType;
+            TransferResultDataDataType value = encodeable as TransferResultDataDataType;
 
             if (value == null)
             {
@@ -748,14 +747,14 @@ namespace Opc.Ua.Di
         /// <summary cref="ICloneable.Clone" />
         public override object Clone()
         {
-            return (FetchResultDataDataType)this.MemberwiseClone();
+            return (TransferResultDataDataType)this.MemberwiseClone();
         }
         #endif
 
         /// <summary cref="Object.MemberwiseClone" />
         public new object MemberwiseClone()
         {
-            FetchResultDataDataType clone = (FetchResultDataDataType)base.MemberwiseClone();
+            TransferResultDataDataType clone = (TransferResultDataDataType)base.MemberwiseClone();
 
             clone.m_sequenceNumber = (int)Utils.Clone(this.m_sequenceNumber);
             clone.m_endOfResults = (bool)Utils.Clone(this.m_endOfResults);
@@ -772,54 +771,54 @@ namespace Opc.Ua.Di
         #endregion
     }
 
-    #region FetchResultDataDataTypeCollection Class
+    #region TransferResultDataDataTypeCollection Class
     /// <summary>
-    /// A collection of FetchResultDataDataType objects.
+    /// A collection of TransferResultDataDataType objects.
     /// </summary>
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
-    [CollectionDataContract(Name = "ListOfFetchResultDataDataType", Namespace = Opc.Ua.Di.Namespaces.OpcUaDiXsd, ItemName = "FetchResultDataDataType")]
+    [CollectionDataContract(Name = "ListOfTransferResultDataDataType", Namespace = Opc.Ua.Di.Namespaces.OpcUaDiXsd, ItemName = "TransferResultDataDataType")]
     #if !NET_STANDARD
-    public partial class FetchResultDataDataTypeCollection : List<FetchResultDataDataType>, ICloneable
+    public partial class TransferResultDataDataTypeCollection : List<TransferResultDataDataType>, ICloneable
     #else
-    public partial class FetchResultDataDataTypeCollection : List<FetchResultDataDataType>
+    public partial class TransferResultDataDataTypeCollection : List<TransferResultDataDataType>
     #endif
     {
         #region Constructors
         /// <summary>
         /// Initializes the collection with default values.
         /// </summary>
-        public FetchResultDataDataTypeCollection() {}
+        public TransferResultDataDataTypeCollection() {}
 
         /// <summary>
         /// Initializes the collection with an initial capacity.
         /// </summary>
-        public FetchResultDataDataTypeCollection(int capacity) : base(capacity) {}
+        public TransferResultDataDataTypeCollection(int capacity) : base(capacity) {}
 
         /// <summary>
         /// Initializes the collection with another collection.
         /// </summary>
-        public FetchResultDataDataTypeCollection(IEnumerable<FetchResultDataDataType> collection) : base(collection) {}
+        public TransferResultDataDataTypeCollection(IEnumerable<TransferResultDataDataType> collection) : base(collection) {}
         #endregion
 
         #region Static Operators
         /// <summary>
         /// Converts an array to a collection.
         /// </summary>
-        public static implicit operator FetchResultDataDataTypeCollection(FetchResultDataDataType[] values)
+        public static implicit operator TransferResultDataDataTypeCollection(TransferResultDataDataType[] values)
         {
             if (values != null)
             {
-                return new FetchResultDataDataTypeCollection(values);
+                return new TransferResultDataDataTypeCollection(values);
             }
 
-            return new FetchResultDataDataTypeCollection();
+            return new TransferResultDataDataTypeCollection();
         }
 
         /// <summary>
         /// Converts a collection to an array.
         /// </summary>
-        public static explicit operator FetchResultDataDataType[](FetchResultDataDataTypeCollection values)
+        public static explicit operator TransferResultDataDataType[](TransferResultDataDataTypeCollection values)
         {
             if (values != null)
             {
@@ -837,7 +836,7 @@ namespace Opc.Ua.Di
         /// </summary>
         public object Clone()
         {
-            return (FetchResultDataDataTypeCollection)this.MemberwiseClone();
+            return (TransferResultDataDataTypeCollection)this.MemberwiseClone();
         }
         #endregion
         #endif
@@ -845,11 +844,11 @@ namespace Opc.Ua.Di
         /// <summary cref="Object.MemberwiseClone" />
         public new object MemberwiseClone()
         {
-            FetchResultDataDataTypeCollection clone = new FetchResultDataDataTypeCollection(this.Count);
+            TransferResultDataDataTypeCollection clone = new TransferResultDataDataTypeCollection(this.Count);
 
             for (int ii = 0; ii < this.Count; ii++)
             {
-                clone.Add((FetchResultDataDataType)Utils.Clone(this[ii]));
+                clone.Add((TransferResultDataDataType)Utils.Clone(this[ii]));
             }
 
             return clone;
@@ -1117,5 +1116,236 @@ namespace Opc.Ua.Di
     #endregion
     #endif
     #endregion
+
+    #region SoftwareVersionFileType Enumeration
+    #if (!OPCUA_EXCLUDE_SoftwareVersionFileType)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <exclude />
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
+    [DataContract(Namespace = Opc.Ua.Di.Namespaces.OpcUaDiXsd)]
+    public enum SoftwareVersionFileType
+    {
+        /// <remarks />
+        [EnumMember(Value = "Current_0")]
+        Current = 0,
+
+        /// <remarks />
+        [EnumMember(Value = "Pending_1")]
+        Pending = 1,
+
+        /// <remarks />
+        [EnumMember(Value = "Fallback_2")]
+        Fallback = 2,
+    }
+
+    #region SoftwareVersionFileTypeCollection Class
+    /// <summary>
+    /// A collection of SoftwareVersionFileType objects.
+    /// </summary>
+    /// <exclude />
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
+    [CollectionDataContract(Name = "ListOfSoftwareVersionFileType", Namespace = Opc.Ua.Di.Namespaces.OpcUaDiXsd, ItemName = "SoftwareVersionFileType")]
+    #if !NET_STANDARD
+    public partial class SoftwareVersionFileTypeCollection : List<SoftwareVersionFileType>, ICloneable
+    #else
+    public partial class SoftwareVersionFileTypeCollection : List<SoftwareVersionFileType>
+    #endif
+    {
+        #region Constructors
+        /// <summary>
+        /// Initializes the collection with default values.
+        /// </summary>
+        public SoftwareVersionFileTypeCollection() {}
+
+        /// <summary>
+        /// Initializes the collection with an initial capacity.
+        /// </summary>
+        public SoftwareVersionFileTypeCollection(int capacity) : base(capacity) {}
+
+        /// <summary>
+        /// Initializes the collection with another collection.
+        /// </summary>
+        public SoftwareVersionFileTypeCollection(IEnumerable<SoftwareVersionFileType> collection) : base(collection) {}
+        #endregion
+
+        #region Static Operators
+        /// <summary>
+        /// Converts an array to a collection.
+        /// </summary>
+        public static implicit operator SoftwareVersionFileTypeCollection(SoftwareVersionFileType[] values)
+        {
+            if (values != null)
+            {
+                return new SoftwareVersionFileTypeCollection(values);
+            }
+
+            return new SoftwareVersionFileTypeCollection();
+        }
+
+        /// <summary>
+        /// Converts a collection to an array.
+        /// </summary>
+        public static explicit operator SoftwareVersionFileType[](SoftwareVersionFileTypeCollection values)
+        {
+            if (values != null)
+            {
+                return values.ToArray();
+            }
+
+            return null;
+        }
+        #endregion
+
+        #if !NET_STANDARD
+        #region ICloneable Methods
+        /// <summary>
+        /// Creates a deep copy of the collection.
+        /// </summary>
+        public object Clone()
+        {
+            return (SoftwareVersionFileTypeCollection)this.MemberwiseClone();
+        }
+        #endregion
+        #endif
+
+        /// <summary cref="Object.MemberwiseClone" />
+        public new object MemberwiseClone()
+        {
+            SoftwareVersionFileTypeCollection clone = new SoftwareVersionFileTypeCollection(this.Count);
+
+            for (int ii = 0; ii < this.Count; ii++)
+            {
+                clone.Add((SoftwareVersionFileType)Utils.Clone(this[ii]));
+            }
+
+            return clone;
+        }
+    }
+    #endregion
+    #endif
+    #endregion
+
+    #region UpdateBehavior Enumeration
+    #if (!OPCUA_EXCLUDE_UpdateBehavior)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <exclude />
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
+    [DataContract(Namespace = Opc.Ua.Di.Namespaces.OpcUaDiXsd)][Flags]
+    public enum UpdateBehavior : UInt32
+    {
+        /// <remarks />
+        [EnumMember(Value = "None_0")]
+        None = 0,
+
+        /// <remarks />
+        [EnumMember(Value = "KeepsParameters_1")]
+        KeepsParameters = 1,
+
+        /// <remarks />
+        [EnumMember(Value = "WillDisconnect_2")]
+        WillDisconnect = 2,
+
+        /// <remarks />
+        [EnumMember(Value = "RequiresPowerCycle_4")]
+        RequiresPowerCycle = 4,
+
+        /// <remarks />
+        [EnumMember(Value = "WillReboot_8")]
+        WillReboot = 8,
+
+        /// <remarks />
+        [EnumMember(Value = "NeedsPreparation_16")]
+        NeedsPreparation = 16,
+    }
+
+    #region UpdateBehaviorCollection Class
+    /// <summary>
+    /// A collection of UpdateBehavior objects.
+    /// </summary>
+    /// <exclude />
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
+    [CollectionDataContract(Name = "ListOfUpdateBehavior", Namespace = Opc.Ua.Di.Namespaces.OpcUaDiXsd, ItemName = "UpdateBehavior")]
+    #if !NET_STANDARD
+    public partial class UpdateBehaviorCollection : List<UpdateBehavior>, ICloneable
+    #else
+    public partial class UpdateBehaviorCollection : List<UpdateBehavior>
+    #endif
+    {
+        #region Constructors
+        /// <summary>
+        /// Initializes the collection with default values.
+        /// </summary>
+        public UpdateBehaviorCollection() {}
+
+        /// <summary>
+        /// Initializes the collection with an initial capacity.
+        /// </summary>
+        public UpdateBehaviorCollection(int capacity) : base(capacity) {}
+
+        /// <summary>
+        /// Initializes the collection with another collection.
+        /// </summary>
+        public UpdateBehaviorCollection(IEnumerable<UpdateBehavior> collection) : base(collection) {}
+        #endregion
+
+        #region Static Operators
+        /// <summary>
+        /// Converts an array to a collection.
+        /// </summary>
+        public static implicit operator UpdateBehaviorCollection(UpdateBehavior[] values)
+        {
+            if (values != null)
+            {
+                return new UpdateBehaviorCollection(values);
+            }
+
+            return new UpdateBehaviorCollection();
+        }
+
+        /// <summary>
+        /// Converts a collection to an array.
+        /// </summary>
+        public static explicit operator UpdateBehavior[](UpdateBehaviorCollection values)
+        {
+            if (values != null)
+            {
+                return values.ToArray();
+            }
+
+            return null;
+        }
+        #endregion
+
+        #if !NET_STANDARD
+        #region ICloneable Methods
+        /// <summary>
+        /// Creates a deep copy of the collection.
+        /// </summary>
+        public object Clone()
+        {
+            return (UpdateBehaviorCollection)this.MemberwiseClone();
+        }
+        #endregion
+        #endif
+
+        /// <summary cref="Object.MemberwiseClone" />
+        public new object MemberwiseClone()
+        {
+            UpdateBehaviorCollection clone = new UpdateBehaviorCollection(this.Count);
+
+            for (int ii = 0; ii < this.Count; ii++)
+            {
+                clone.Add((UpdateBehavior)Utils.Clone(this[ii]));
+            }
+
+            return clone;
+        }
+    }
+    #endregion
+    #endif
+    #endregion
 }
-#pragma warning restore CS8600, CS8601,CS8603,CS8604,CS8618,CS8619, CS8625

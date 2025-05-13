@@ -35,7 +35,6 @@ using System.Runtime.Serialization;
 using Opc.Ua.Di;
 using Opc.Ua;
 
-#pragma warning disable CS8600, CS8601, CS8603, CS8604, CS8618
 namespace Opc.Ua.Fdi5
 {
     #region UIDescriptionState Class
@@ -126,517 +125,7 @@ namespace Opc.Ua.Fdi5
     }
     #endif
     #endregion
-
-    #region UIPlugInState Class
-    #if (!OPCUA_EXCLUDE_UIPlugInState)
-    /// <summary>
-    /// Stores an instance of the UIPlugInType VariableType.
-    /// </summary>
-    /// <exclude />
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
-    public partial class UIPlugInState : UIElementState<byte[]>
-    {
-        #region Constructors
-        /// <summary>
-        /// Initializes the type with its default attribute values.
-        /// </summary>
-        public UIPlugInState(NodeState parent) : base(parent)
-        {
-        }
-
-        /// <summary>
-        /// Returns the id of the default type definition node for the instance.
-        /// </summary>
-        protected override NodeId GetDefaultTypeDefinitionId(NamespaceTable namespaceUris)
-        {
-            return Opc.Ua.NodeId.Create(Opc.Ua.Fdi5.VariableTypes.UIPlugInType, Opc.Ua.Fdi5.Namespaces.OpcUaFdi5, namespaceUris);
-        }
-
-        /// <summary>
-        /// Returns the id of the default data type node for the instance.
-        /// </summary>
-        protected override NodeId GetDefaultDataTypeId(NamespaceTable namespaceUris)
-        {
-            return Opc.Ua.NodeId.Create(Opc.Ua.DataTypes.Byte, Opc.Ua.Namespaces.OpcUa, namespaceUris);
-        }
-
-        /// <summary>
-        /// Returns the id of the default value rank for the instance.
-        /// </summary>
-        protected override int GetDefaultValueRank()
-        {
-            return ValueRanks.OneDimension;
-        }
-
-        #if (!OPCUA_EXCLUDE_InitializationStrings)
-        /// <summary>
-        /// Initializes the instance.
-        /// </summary>
-        protected override void Initialize(ISystemContext context)
-        {
-            Initialize(context, InitializationString);
-            InitializeOptionalChildren(context);
-        }
-
-        /// <summary>
-        /// Initializes the instance with a node.
-        /// </summary>
-        protected override void Initialize(ISystemContext context, NodeState source)
-        {
-            InitializeOptionalChildren(context);
-            base.Initialize(context, source);
-        }
-
-        /// <summary>
-        /// Initializes the any option children defined for the instance.
-        /// </summary>
-        protected override void InitializeOptionalChildren(ISystemContext context)
-        {
-            base.InitializeOptionalChildren(context);
-
-            if (Documentation != null)
-            {
-                Documentation.Initialize(context, Documentation_InitializationString);
-            }
-        }
-
-        #region Initialization String
-        private const string Documentation_InitializationString =
-           "AgAAACYAAABodHRwOi8vZmRpLWNvb3BlcmF0aW9uLmNvbS9PUENVQS9GREk1Lx8AAABodHRwOi8vb3Bj" +
-           "Zm91bmRhdGlvbi5vcmcvVUEvREkv/////wRggAoBAAAAAQANAAAARG9jdW1lbnRhdGlvbgEBCgAALwA9" +
-           "CgAAAP////8AAAAA";
-
-        private const string InitializationString =
-           "AgAAACYAAABodHRwOi8vZmRpLWNvb3BlcmF0aW9uLmNvbS9PUENVQS9GREk1Lx8AAABodHRwOi8vb3Bj" +
-           "Zm91bmRhdGlvbi5vcmcvVUEvREkv/////xdgiQICAAAAAQAUAAAAVUlQbHVnSW5UeXBlSW5zdGFuY2UB" +
-           "AQIAAQECAAIAAAAAAwEAAAABAAAAAAAAAAEB/////wgAAAAVYIkKAgAAAAEAEQAAAFVJUFZhcmlhbnRW" +
-           "ZXJzaW9uAQEDAAAuAEQDAAAAAAz/////AQH/////AAAAABVgiQoCAAAAAQAUAAAARkRJVGVjaG5vbG9n" +
-           "eVZlcnNpb24BAQQAAC4ARAQAAAAADP////8BAf////8AAAAAFWCJCgIAAAABAAkAAABSdW50aW1lSWQB" +
-           "AQUAAC4ARAUAAAAADP////8BAf////8AAAAAFWCJCgIAAAABAA4AAABDcHVJbmZvcm1hdGlvbgEBBgAA" +
-           "LgBEBgAAAAAM/////wEB/////wAAAAAVYIkKAgAAAAEACgAAAFBsYXRmb3JtSWQBAQcAAC4ARAcAAAAA" +
-           "DP////8BAf////8AAAAAFWCJCgIAAAABAAUAAABTdHlsZQEBCAAALgBECAAAAAEBxAD/////AQH/////" +
-           "AAAAABVgiQoCAAAAAQAQAAAAU3RhcnRFbGVtZW50TmFtZQEBCQAALgBECQAAAAAM/////wEB/////wAA" +
-           "AAAEYIAKAQAAAAEADQAAAERvY3VtZW50YXRpb24BAQoAAC8APQoAAAD/////AAAAAA==";
-        #endregion
-        #endif
-        #endregion
-
-        #region Public Properties
-        /// <remarks />
-        public PropertyState<string> UIPVariantVersion
-        {
-            get
-            {
-                return m_uIPVariantVersion;
-            }
-
-            set
-            {
-                if (!Object.ReferenceEquals(m_uIPVariantVersion, value))
-                {
-                    ChangeMasks |= NodeStateChangeMasks.Children;
-                }
-
-                m_uIPVariantVersion = value;
-            }
-        }
-
-        /// <remarks />
-        public PropertyState<string> FDITechnologyVersion
-        {
-            get
-            {
-                return m_fDITechnologyVersion;
-            }
-
-            set
-            {
-                if (!Object.ReferenceEquals(m_fDITechnologyVersion, value))
-                {
-                    ChangeMasks |= NodeStateChangeMasks.Children;
-                }
-
-                m_fDITechnologyVersion = value;
-            }
-        }
-
-        /// <remarks />
-        public PropertyState<string> RuntimeId
-        {
-            get
-            {
-                return m_runtimeId;
-            }
-
-            set
-            {
-                if (!Object.ReferenceEquals(m_runtimeId, value))
-                {
-                    ChangeMasks |= NodeStateChangeMasks.Children;
-                }
-
-                m_runtimeId = value;
-            }
-        }
-
-        /// <remarks />
-        public PropertyState<string> CpuInformation
-        {
-            get
-            {
-                return m_cpuInformation;
-            }
-
-            set
-            {
-                if (!Object.ReferenceEquals(m_cpuInformation, value))
-                {
-                    ChangeMasks |= NodeStateChangeMasks.Children;
-                }
-
-                m_cpuInformation = value;
-            }
-        }
-
-        /// <remarks />
-        public PropertyState<string> PlatformId
-        {
-            get
-            {
-                return m_platformId;
-            }
-
-            set
-            {
-                if (!Object.ReferenceEquals(m_platformId, value))
-                {
-                    ChangeMasks |= NodeStateChangeMasks.Children;
-                }
-
-                m_platformId = value;
-            }
-        }
-
-        /// <remarks />
-        public PropertyState<StyleType> Style
-        {
-            get
-            {
-                return m_style;
-            }
-
-            set
-            {
-                if (!Object.ReferenceEquals(m_style, value))
-                {
-                    ChangeMasks |= NodeStateChangeMasks.Children;
-                }
-
-                m_style = value;
-            }
-        }
-
-        /// <remarks />
-        public PropertyState<string> StartElementName
-        {
-            get
-            {
-                return m_startElementName;
-            }
-
-            set
-            {
-                if (!Object.ReferenceEquals(m_startElementName, value))
-                {
-                    ChangeMasks |= NodeStateChangeMasks.Children;
-                }
-
-                m_startElementName = value;
-            }
-        }
-
-        /// <remarks />
-        public FolderState Documentation
-        {
-            get
-            {
-                return m_documentation;
-            }
-
-            set
-            {
-                if (!Object.ReferenceEquals(m_documentation, value))
-                {
-                    ChangeMasks |= NodeStateChangeMasks.Children;
-                }
-
-                m_documentation = value;
-            }
-        }
-        #endregion
-
-        #region Overridden Methods
-        /// <summary>
-        /// Populates a list with the children that belong to the node.
-        /// </summary>
-        /// <param name="context">The context for the system being accessed.</param>
-        /// <param name="children">The list of children to populate.</param>
-        public override void GetChildren(
-            ISystemContext context,
-            IList<BaseInstanceState> children)
-        {
-            if (m_uIPVariantVersion != null)
-            {
-                children.Add(m_uIPVariantVersion);
-            }
-
-            if (m_fDITechnologyVersion != null)
-            {
-                children.Add(m_fDITechnologyVersion);
-            }
-
-            if (m_runtimeId != null)
-            {
-                children.Add(m_runtimeId);
-            }
-
-            if (m_cpuInformation != null)
-            {
-                children.Add(m_cpuInformation);
-            }
-
-            if (m_platformId != null)
-            {
-                children.Add(m_platformId);
-            }
-
-            if (m_style != null)
-            {
-                children.Add(m_style);
-            }
-
-            if (m_startElementName != null)
-            {
-                children.Add(m_startElementName);
-            }
-
-            if (m_documentation != null)
-            {
-                children.Add(m_documentation);
-            }
-
-            base.GetChildren(context, children);
-        }
-
-        /// <summary>
-        /// Finds the child with the specified browse name.
-        /// </summary>
-        protected override BaseInstanceState FindChild(
-            ISystemContext context,
-            QualifiedName browseName,
-            bool createOrReplace,
-            BaseInstanceState replacement)
-        {
-            if (QualifiedName.IsNull(browseName))
-            {
-                return null;
-            }
-
-            BaseInstanceState instance = null;
-
-            switch (browseName.Name)
-            {
-                case Opc.Ua.Fdi5.BrowseNames.UIPVariantVersion:
-                {
-                    if (createOrReplace)
-                    {
-                        if (UIPVariantVersion == null)
-                        {
-                            if (replacement == null)
-                            {
-                                UIPVariantVersion = new PropertyState<string>(this);
-                            }
-                            else
-                            {
-                                UIPVariantVersion = (PropertyState<string>)replacement;
-                            }
-                        }
-                    }
-
-                    instance = UIPVariantVersion;
-                    break;
-                }
-
-                case Opc.Ua.Fdi5.BrowseNames.FDITechnologyVersion:
-                {
-                    if (createOrReplace)
-                    {
-                        if (FDITechnologyVersion == null)
-                        {
-                            if (replacement == null)
-                            {
-                                FDITechnologyVersion = new PropertyState<string>(this);
-                            }
-                            else
-                            {
-                                FDITechnologyVersion = (PropertyState<string>)replacement;
-                            }
-                        }
-                    }
-
-                    instance = FDITechnologyVersion;
-                    break;
-                }
-
-                case Opc.Ua.Fdi5.BrowseNames.RuntimeId:
-                {
-                    if (createOrReplace)
-                    {
-                        if (RuntimeId == null)
-                        {
-                            if (replacement == null)
-                            {
-                                RuntimeId = new PropertyState<string>(this);
-                            }
-                            else
-                            {
-                                RuntimeId = (PropertyState<string>)replacement;
-                            }
-                        }
-                    }
-
-                    instance = RuntimeId;
-                    break;
-                }
-
-                case Opc.Ua.Fdi5.BrowseNames.CpuInformation:
-                {
-                    if (createOrReplace)
-                    {
-                        if (CpuInformation == null)
-                        {
-                            if (replacement == null)
-                            {
-                                CpuInformation = new PropertyState<string>(this);
-                            }
-                            else
-                            {
-                                CpuInformation = (PropertyState<string>)replacement;
-                            }
-                        }
-                    }
-
-                    instance = CpuInformation;
-                    break;
-                }
-
-                case Opc.Ua.Fdi5.BrowseNames.PlatformId:
-                {
-                    if (createOrReplace)
-                    {
-                        if (PlatformId == null)
-                        {
-                            if (replacement == null)
-                            {
-                                PlatformId = new PropertyState<string>(this);
-                            }
-                            else
-                            {
-                                PlatformId = (PropertyState<string>)replacement;
-                            }
-                        }
-                    }
-
-                    instance = PlatformId;
-                    break;
-                }
-
-                case Opc.Ua.Fdi5.BrowseNames.Style:
-                {
-                    if (createOrReplace)
-                    {
-                        if (Style == null)
-                        {
-                            if (replacement == null)
-                            {
-                                Style = new PropertyState<StyleType>(this);
-                            }
-                            else
-                            {
-                                Style = (PropertyState<StyleType>)replacement;
-                            }
-                        }
-                    }
-
-                    instance = Style;
-                    break;
-                }
-
-                case Opc.Ua.Fdi5.BrowseNames.StartElementName:
-                {
-                    if (createOrReplace)
-                    {
-                        if (StartElementName == null)
-                        {
-                            if (replacement == null)
-                            {
-                                StartElementName = new PropertyState<string>(this);
-                            }
-                            else
-                            {
-                                StartElementName = (PropertyState<string>)replacement;
-                            }
-                        }
-                    }
-
-                    instance = StartElementName;
-                    break;
-                }
-
-                case Opc.Ua.Fdi5.BrowseNames.Documentation:
-                {
-                    if (createOrReplace)
-                    {
-                        if (Documentation == null)
-                        {
-                            if (replacement == null)
-                            {
-                                Documentation = new FolderState(this);
-                            }
-                            else
-                            {
-                                Documentation = (FolderState)replacement;
-                            }
-                        }
-                    }
-
-                    instance = Documentation;
-                    break;
-                }
-            }
-
-            if (instance != null)
-            {
-                return instance;
-            }
-
-            return base.FindChild(context, browseName, createOrReplace, replacement);
-        }
-        #endregion
-
-        #region Private Fields
-        private PropertyState<string> m_uIPVariantVersion;
-        private PropertyState<string> m_fDITechnologyVersion;
-        private PropertyState<string> m_runtimeId;
-        private PropertyState<string> m_cpuInformation;
-        private PropertyState<string> m_platformId;
-        private PropertyState<StyleType> m_style;
-        private PropertyState<string> m_startElementName;
-        private FolderState m_documentation;
-        #endregion
-    }
-    #endif
-    #endregion
+    
 
     #region ActionState Class
     #if (!OPCUA_EXCLUDE_ActionState)
@@ -1567,7 +1056,7 @@ namespace Opc.Ua.Fdi5
             ServiceResult result = null;
 
             string editContextId = (string)_inputArguments[0];
-            RegistrationParameters[] nodesToRegister = (RegistrationParameters[])ExtensionObject.ToArray(_inputArguments[1], typeof(RegistrationParameters));
+            RegistrationParameters[] nodesToRegister = (RegistrationParameters[])ToArray(_context, _inputArguments[1], typeof(RegistrationParameters));
 
             RegisterNodesResult registerNodesStatus = (RegisterNodesResult)_outputArguments[0];
 
@@ -1586,11 +1075,137 @@ namespace Opc.Ua.Fdi5
 
             return result;
         }
+
         #endregion
 
         #region Private Fields
         #endregion
+
+        /// <summary>
+        /// Converts an array of extension objects to an array of the specified type.
+        /// </summary>
+        /// <param name="source">The array to convert.</param>
+        /// <param name="elementType">The type of each element.</param>
+        /// <returns>The new array</returns>
+        /// <remarks>
+        /// Will add null elements if individual elements cannot be converted.
+        /// </remarks>
+        public static Array ToArray(ISystemContext context, object source, Type elementType)
+        {
+            var extensions = source as Array;
+
+            if (extensions == null)
+            {
+                return null;
+            }
+
+            Array output = Array.CreateInstance(elementType, extensions.Length);
+
+            for (int ii = 0; ii < output.Length; ii++)
+            {
+                IEncodeable element = ToEncodeable(context, extensions.GetValue(ii) as ExtensionObject, elementType);
+
+                if (elementType.IsInstanceOfType(element))
+                {
+                    output.SetValue(element, ii);
+                }
+            }
+
+            return output;
+        }
+
+        /// <summary>
+        /// Converts an extension object to an encodeable object.
+        /// </summary>
+        /// <param name="extension">The extension object to convert to an encodeable object</param>
+        /// <returns>Instance of <see cref="IEncodeable"/> for the embeded object.</returns>
+        /// <remarks>
+        /// Converts an extension object to an encodeable object.
+        /// </remarks>
+        public static IEncodeable ToEncodeable(ISystemContext context, ExtensionObject extension, Type targetType)
+        {
+            if (extension == null)
+            {
+                return null;
+            }
+
+            if (extension.Body is IEncodeable encodeableBody)
+            {
+                return encodeableBody;
+            }
+
+            var result = DecodeExtensionObject(
+                context, targetType, extension, true);
+
+            return (IEncodeable)result;
+        }
+
+        /// <summary>
+        /// Decodes the contents of an extension object.
+        /// </summary>
+        /// <param name="context">The context (uses ServiceMessageContext.GlobalContext if null).</param>
+        /// <param name="targetType">The type that the ExtensionObject must be converted to.</param>
+        /// <param name="extension">The ExtensionObject to convert.</param>
+        /// <param name="throwOnError">Whether to throw an exception on error.</param>
+        /// <returns>The decoded instance. Null on error.</returns>
+        public static object DecodeExtensionObject(ISystemContext context, Type targetType, ExtensionObject extension, bool throwOnError)
+        {
+            if (targetType.IsInstanceOfType(extension.Body))
+            {
+                return extension.Body;
+            }
+
+            IEncodeable instance = Activator.CreateInstance(targetType) as IEncodeable;
+
+            if (instance != null)
+            {
+                IDecoder decoder = null;
+
+                ServiceMessageContext messageContext = ServiceMessageContext.GlobalContext;
+
+                if (context != null)
+                {
+                    messageContext = new ServiceMessageContext();
+                    messageContext.NamespaceUris = context.NamespaceUris;
+                    messageContext.ServerUris = context.ServerUris;
+                    messageContext.Factory = context.EncodeableFactory;
+                }
+
+                if (extension.Encoding == ExtensionObjectEncoding.Binary)
+                {
+                    decoder = new BinaryDecoder(extension.Body as byte[], messageContext);
+                }
+                else if (extension.Encoding == ExtensionObjectEncoding.Xml)
+                {
+                    decoder = new XmlDecoder(extension.Body as XmlElement, messageContext);
+                }
+
+                if (decoder != null)
+                {
+                    try
+                    {
+                        instance.Decode(decoder);
+                        return instance;
+                    }
+                    catch (Exception e)
+                    {
+                        if (throwOnError)
+                        {
+                            throw ServiceResultException.Create(StatusCodes.BadTypeMismatch, "Cannot convert ExtensionObject to {0}. Error = {1}", targetType.Name, e.Message);
+                        }
+                    }
+                }
+            }
+
+            if (throwOnError)
+            {
+                throw ServiceResultException.Create(StatusCodes.BadTypeMismatch, "Cannot convert ExtensionObject to {0}.", targetType.Name);
+            }
+
+            return null;
+        }
     }
+
 
     /// <summary>
     /// Used to receive notifications when the method is called.
@@ -2499,10 +2114,10 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult InitDirectAccessMethodStateMethodCallHandler(
-        ISystemContext systemContext,
+        ISystemContext context,
         MethodState method,
         NodeId objectId,
-        string context,
+        string editContext,
         ref int initDirectAccessError);
     #endif
     #endregion
@@ -3130,4 +2745,3 @@ namespace Opc.Ua.Fdi5
     #endif
     #endregion
 }
-#pragma warning restore CS8600, CS8601, CS8603, CS8604, CS8618

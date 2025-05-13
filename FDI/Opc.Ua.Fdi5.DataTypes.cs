@@ -32,10 +32,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 using System.Runtime.Serialization;
-using Opc.Ua.Di;
+//using Opc.Ua.Di;
 using Opc.Ua;
 
-#pragma warning disable CS8600, CS8601,CS8603,CS8604,CS8618,CS8619, CS8625
 namespace Opc.Ua.Fdi5
 {
     #region WindowModeType Enumeration
@@ -1507,4 +1506,3 @@ namespace Opc.Ua.Fdi5
     #endif
     #endregion
 }
-#pragma warning restore CS8600, CS8601,CS8603,CS8604,CS8618,CS8619, CS8625

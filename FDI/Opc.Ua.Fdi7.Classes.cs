@@ -35,7 +35,6 @@ using System.Runtime.Serialization;
 using Opc.Ua.Di;
 using Opc.Ua;
 
-#pragma warning disable CS8600, CS8601, CS8603, CS8604, CS8618
 namespace Opc.Ua.Fdi7
 {
     #region Foundation_H1State Class
@@ -10770,4 +10769,3 @@ namespace Opc.Ua.Fdi7
     #endif
     #endregion
 }
-#pragma warning restore CS8600, CS8601, CS8603, CS8604, CS8618
