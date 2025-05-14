@@ -8,6 +8,12 @@
     Scope = "module")]
 
 [assembly: SuppressMessage(
+    "StyleCop.CSharp.SpacingRules",
+    "SA1005:SingleLineCommentsMustBeginWithSingleSpace",
+    Justification = "Это чужой код",
+    Scope = "module")]
+
+[assembly: SuppressMessage(
     "StyleCop.CSharp.OrderingRules",
     "SA1200:UsingDirectivesMustBePlacedWithinNamespace",
     Justification = "Мы пока игнорируем это предупреждение - но стоит исправить",
@@ -35,6 +41,24 @@
     "StyleCop.CSharp.DocumentationRules",
     "SA1313:ParameterNamesMustBeginWithLowerCaseLetter",
     Justification = "Это не наш код",
+    Scope = "module")]
+
+[assembly: SuppressMessage(
+    "StyleCop.CSharp.LayoutRules",
+    "SA1507:CodeMustNotContainMultipleBlankLinesInARow",
+    Justification = "Мы пока игнорируем это предупреждение - но стоит исправить",
+    Scope = "module")]
+
+[assembly: SuppressMessage(
+    "StyleCop.CSharp.LayoutRules",
+    "SA1512:SingleLineCommentsMustNotBeFollowedByBlankLine",
+    Justification = "Мы пока игнорируем это предупреждение - но стоит исправить",
+    Scope = "module")]
+
+[assembly: SuppressMessage(
+    "StyleCop.CSharp.LayoutRules",
+    "SA1515:SingleLineCommentMustBePrecededByBlankLine",
+    Justification = "Мы пока игнорируем это предупреждение - но стоит исправить",
     Scope = "module")]
 
 [assembly: SuppressMessage(
